@@ -12,8 +12,7 @@ import AboutIconLink from './components/AboutIconLink'
 
 
 function App(){    
-    return ( 
-        
+    return (         
         <FeedbackProvider>    
             <Router>     
             <Header/>
