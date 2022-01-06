@@ -18,7 +18,7 @@ export const FeedbackProvider = ({children}) => {
     //fetch feedback
 
     const fetchFeedback = async () => {
-        const response = await fetch('/feedback?_sort=id&_order=desc');
+        const response = await fetch('https://my-json-server.typicode.com/Lukashenko-Dmitry/json-server/feedback?_sort=id&_order=desc');
         const data = await response.json();
         setFeedback(data);
         setIsLoading(false);
@@ -26,7 +26,7 @@ export const FeedbackProvider = ({children}) => {
 
     // add feedback
     const addFeedback = async (newFeedback) => {
-        const response = await fetch('/feedback', {
+        const response = await fetch('https://my-json-server.typicode.com/Lukashenko-Dmitry/json-server/feedback', {
             method: 'POST',
             headers: {
                 'Content-Type':'application/json'
@@ -41,7 +41,7 @@ export const FeedbackProvider = ({children}) => {
 
     // delete feedback
     const deleteFeedback = async (id) => {        
-        await fetch(`/feedback/${id}`,{ method: 'DELETE'})
+        await fetch(`https://my-json-server.typicode.com/Lukashenko-Dmitry/json-server/feedback/${id}`,{ method: 'DELETE'})
         setFeedback(feedback.filter((item)=> item.id !== id));        
     };
 
@@ -49,7 +49,7 @@ export const FeedbackProvider = ({children}) => {
 
     const updateFeedback = async (id, updItem) => {
         const response = await 
-            fetch(`/feedback/${id}`,
+            fetch(`https://my-json-server.typicode.com/Lukashenko-Dmitry/json-server/feedback/${id}`,
             {method:'PUT',
             headers: {
                 'Content-Type':'application/json'
