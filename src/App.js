@@ -13,7 +13,7 @@ import AboutIconLink from './components/AboutIconLink'
 
 function App(){    
     return (                 
-        <FeedbackProvider>    
+        <FeedbackProvider>               
             <Router>     
             <Header/>
             <div className='container'>    
@@ -30,7 +30,7 @@ function App(){
                 </Routes>
                 <AboutIconLink />
             </div>        
-            </Router>
+            </Router>            
         </FeedbackProvider>    
     )
 }
